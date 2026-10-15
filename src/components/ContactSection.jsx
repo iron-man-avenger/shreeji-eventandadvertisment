@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { companyData } from '../data/contentData';
 
 export default function ContactSection() {
@@ -19,143 +19,166 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24 border-b border-white/10 bg-[#07090E]">
+    <section id="contact" className="py-20 sm:py-28 bg-[#FFFFFF] border-b border-[#D0C3BA]/60 relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         
         {/* Header */}
-        <div className="space-y-3 sm:space-y-4 max-w-2xl mb-12 sm:mb-16">
-          <div className="text-xs uppercase tracking-widest text-[#E5C07B] font-semibold">
-            [ <span>Glad you're here</span> ]
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 sm:mb-18">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#10214B]/5 border border-[#10214B]/15 text-xs font-semibold tracking-wider uppercase text-[#10214B] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D7BD88]"></span>
+              Direct Inquiries
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#10214B] tracking-tight leading-[1.15]">
+              Let's plan your next corporate event or turnout campaign.
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight uppercase">
-            Let's Talk.
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-400">
-            Have an upcoming corporate event, shareholder AGM, or require dedicated C-level tele-acquisition? Get in touch with our team in Ahmedabad.
+
+          <p className="max-w-md text-sm text-[#5E6C84] leading-relaxed">
+            Speak directly with our leadership team in Satellite, Ahmedabad. Receive a preliminary concept deck, spatial recommendations, and transparent pricing.
           </p>
         </div>
 
-        {/* 2-Column Clean Contact Grid */}
+        {/* 2-Column Contact & Form Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
           
-          {/* Left: Office Addresses like JK Events */}
-          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
-            <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/[0.01] space-y-6">
+          {/* Left Column: Ahmedabad Office & Direct Channels */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Primary Office Card */}
+            <div className="p-7 sm:p-8 rounded-3xl bg-[#EBE7E1] border border-[#D0C3BA]/70 space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#E5C07B] font-semibold">
-                  [ <span>Ahmedabad Head Office</span> ]
+                <span className="text-[11px] uppercase tracking-widest text-[#10214B] font-bold px-2.5 py-1 rounded-md bg-white/70 border border-[#D0C3BA]/60 inline-block mb-3">
+                  Ahmedabad Headquarters
                 </span>
-                <div className="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">
-                  317 &amp; 816, Krupal Pathshala, Shivranjani Cross Road, Satellite, Ahmedabad, Gujarat – 380015
+                <h3 className="text-xl font-display font-medium text-[#10214B]">
+                  Shreeji Events &amp; Advertising
+                </h3>
+                <div className="flex items-start gap-3 text-sm text-[#323F58] mt-3 leading-relaxed">
+                  <MapPin className="w-5 h-5 text-[#10214B] shrink-0 mt-0.5" />
+                  <span>
+                    317 &amp; 816, Krupal Pathshala, Shivranjani Cross Road, Satellite, Ahmedabad, Gujarat – 380015
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/5">
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                  [ <span>Pune Regional Office</span> ]
-                </span>
-                <div className="text-sm text-slate-300 mt-2 leading-relaxed">
-                  111, City Square, Narveer Tanaji Wadi, Shivajinagar, Pune – 411005
+              <div className="pt-4 border-t border-[#D0C3BA]/60 space-y-3">
+                <div className="flex items-center gap-3 text-sm text-[#323F58]">
+                  <Clock className="w-4 h-4 text-[#10214B] shrink-0" />
+                  <span>Mon – Sat: 9:30 AM – 7:30 PM IST</span>
                 </div>
-              </div>
-
-              <div className="pt-4 border-t border-white/5">
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                  [ <span>Delhi-NCR Liaison</span> ]
-                </span>
-                <div className="text-sm text-slate-300 mt-2 leading-relaxed">
-                  Hub &amp; Oak, E-47/3, Pocket D, Okhla Phase II, New Delhi – 110020
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-white/5 space-y-2">
-                <div className="text-xs uppercase tracking-widest text-[#E5C07B] font-semibold">
-                  [ <span>Direct Inquiries</span> ]
-                </div>
-                <div>
-                  <a href={`tel:${companyData.phone.replace(/[^0-9+]/g, '')}`} className="text-base font-bold text-white hover:text-[#E5C07B] transition-colors block">
+                <div className="flex items-center gap-3 text-sm text-[#323F58]">
+                  <Phone className="w-4 h-4 text-[#10214B] shrink-0" />
+                  <a href={`tel:${companyData.phone.replace(/[^0-9+]/g, '')}`} className="font-semibold text-[#10214B] hover:text-[#356267] transition-colors">
                     {companyData.phone}
                   </a>
-                  <a href={`tel:${companyData.altPhone.replace(/[^0-9+]/g, '')}`} className="text-sm text-slate-300 hover:text-white transition-colors block">
+                  <span className="text-[#D0C3BA]">/</span>
+                  <a href={`tel:${companyData.altPhone.replace(/[^0-9+]/g, '')}`} className="text-[#5E6C84] hover:text-[#10214B] transition-colors">
                     {companyData.altPhone}
                   </a>
-                  <a href={`mailto:${companyData.email}`} className="text-sm text-slate-400 hover:text-white transition-colors block mt-1">
+                </div>
+                <div className="flex items-center gap-3 text-sm text-[#323F58]">
+                  <Mail className="w-4 h-4 text-[#10214B] shrink-0" />
+                  <a href={`mailto:${companyData.email}`} className="text-[#10214B] hover:underline">
                     {companyData.email}
                   </a>
                 </div>
               </div>
+
+              <div className="pt-4 border-t border-[#D0C3BA]/60">
+                <a
+                  href={`https://wa.me/${companyData.phone.replace(/[^0-9]/g, '')}?text=Hello%20Shreeji%20Events,%20we%20have%20an%20event%20inquiry.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#10214B] text-white hover:bg-[#356267] text-xs sm:text-sm font-semibold transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Instant WhatsApp / Phone Consultation</span>
+                </a>
+              </div>
             </div>
+
+            {/* Quick Guarantees Box */}
+            <div className="p-6 rounded-2xl bg-white border border-[#D0C3BA]/60 space-y-2">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#D7BD88]">
+                Fast Agency Response
+              </div>
+              <p className="text-xs text-[#5E6C84] leading-relaxed">
+                Initial concept deck and preliminary cost estimate provided within <strong>24 business hours</strong> of your brief.
+              </p>
+            </div>
+
           </div>
 
-          {/* Right: Clean Inquiry Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 rounded-2xl border border-white/10 bg-white/[0.01]">
+          {/* Right Column: Clean White Editorial Form Card */}
+          <div className="lg:col-span-7 p-7 sm:p-10 rounded-3xl bg-[#EBE7E1]/50 border border-[#D0C3BA]/70">
             {submitted ? (
-              <div className="py-12 text-center space-y-4">
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center mx-auto text-[#E5C07B]">
-                  <CheckCircle2 className="w-6 h-6" />
+              <div className="py-16 text-center space-y-4">
+                <div className="w-14 h-14 rounded-full bg-[#10214B] text-[#D7BD88] flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-white">
-                  Message Sent
+                <h3 className="text-2xl font-display font-medium text-[#10214B]">
+                  Inquiry Received
                 </h3>
-                <p className="text-sm text-slate-300 max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. Our corporate team in Ahmedabad will contact you shortly regarding <strong>{formData.company}</strong>.
+                <p className="text-sm text-[#5E6C84] max-w-md mx-auto">
+                  Thank you! Our founding director will review your brief and contact you at <strong>{formData.phone || formData.email}</strong> within 24 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2 rounded-full border border-white/20 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all cursor-pointer"
+                  className="mt-4 px-6 py-2.5 rounded-full bg-[#10214B] text-white text-xs font-semibold hover:bg-[#356267] transition-colors"
                 >
-                  Send another inquiry
+                  Send Another Message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                      Your Name *
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
+                      Your Full Name *
                     </label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Rahul Sharma"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-white transition-colors"
+                      placeholder="e.g. Rajesh Patel"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] placeholder:text-[#5E6C84]/60 text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                      Corporate Email *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="rahul@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-white transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                      Company Name *
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
+                      Company / Organization *
                     </label>
                     <input
                       type="text"
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      placeholder="e.g. Poonawalla Fincorp / Reliance"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-white transition-colors"
+                      placeholder="e.g. Apex Pharma Ltd."
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] placeholder:text-[#5E6C84]/60 text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
+                      Work Email *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="rajesh@company.com"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] placeholder:text-[#5E6C84]/60 text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
                       Phone Number *
                     </label>
                     <input
@@ -164,49 +187,53 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-white transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] placeholder:text-[#5E6C84]/60 text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                    Primary Service Needed
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
+                    Primary Service of Interest
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0D111A] border border-white/10 text-white text-sm focus:outline-none focus:border-white transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all"
                   >
-                    <option value="Corporate Events & Summits">Corporate Events &amp; Summits</option>
-                    <option value="B2B Telemarketing & Inside Sales">B2B Telemarketing &amp; Inside Sales</option>
-                    <option value="Combined Events + Tele-Acquisition">Combined Events + Tele-Acquisition</option>
-                    <option value="AGM Statutory AV Production">AGM Statutory AV Production</option>
-                    <option value="Exhibition Stall Design & Fabrication">Exhibition Stall Design &amp; Fabrication</option>
-                    <option value="Brand Activations & BTL Marketing">Brand Activations &amp; BTL Marketing</option>
+                    <option value="Corporate Event Management">Corporate Conference, Summit or AGM</option>
+                    <option value="B2B Telemarketing & Turnout">B2B Tele-Acquisition &amp; Guaranteed RSVPs</option>
+                    <option value="Exhibition Stall & Fabrication">Exhibition Stall 3D Design &amp; Fabrication</option>
+                    <option value="Brand Activations & BTL">Brand Activation / Commercial Roadshow</option>
+                    <option value="Outdoor Media & Advertising">Outdoor Advertising &amp; OOH Hoardings</option>
+                    <option value="Comprehensive Package">Turnkey Package (Staging + Turnout)</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                    Event Details or Objectives
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#10214B] mb-1.5">
+                    Project Details &amp; Expected Dates
                   </label>
                   <textarea
-                    rows={3}
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your event scale, location, dates, or calling objectives."
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-white transition-colors"
+                    placeholder="Briefly describe your event date, expected guest count, venue preferences, or audience acquisition targets..."
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#D0C3BA] text-[#10214B] placeholder:text-[#5E6C84]/60 text-sm focus:outline-none focus:border-[#10214B] focus:ring-1 focus:ring-[#10214B] transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-white text-black hover:bg-[#E5C07B] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                  className="w-full py-4 rounded-xl bg-[#10214B] hover:bg-[#356267] text-white font-semibold text-sm tracking-wide transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
                 >
-                  <span>Send Inquiry</span>
+                  <span>Submit Event Brief to Founders</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
+
+                <p className="text-[11px] text-center text-[#5E6C84]">
+                  No obligation. We respect privacy and sign corporate NDAs upon request.
+                </p>
               </form>
             )}
           </div>

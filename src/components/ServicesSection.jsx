@@ -1,90 +1,147 @@
 import React, { useState } from 'react';
 import { servicesList } from '../data/contentData';
-import { ArrowRight, Plus, Minus } from 'lucide-react';
+import { Plus, Minus, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function ServicesSection() {
-  const [expandedIndex, setExpandedIndex] = useState(0);
+  const [activeService, setActiveService] = useState(0);
 
   return (
-    <section id="services" className="py-16 sm:py-24 border-b border-white/10 bg-[#07090E]">
+    <section id="services" className="py-20 sm:py-28 bg-[#FFFFFF] border-b border-[#D0C3BA]/60 relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         
-        {/* Section Heading like JK Events */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-12 sm:mb-16">
-          <div className="space-y-2 sm:space-y-3 max-w-xl">
-            <div className="text-xs uppercase tracking-widest text-[#E5C07B] font-semibold">
-              [ <span>Focused on real impact</span> ]
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#10214B]/5 border border-[#10214B]/15 text-xs font-semibold tracking-wider uppercase text-[#10214B] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D7BD88]"></span>
+              Core Practice Areas
             </div>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight uppercase">
-              Solutions That Stand Out
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#10214B] tracking-tight leading-[1.15]">
+              Full-spectrum corporate events, B2B tele-turnout &amp; outdoor brand reach.
             </h2>
           </div>
 
-          <div className="max-w-md text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Our corporate services combine strategy, execution capability, and dedicated B2B tele-calling to deliver measurable business growth and high-impact brand visibility.
-          </div>
+          <p className="max-w-md text-sm text-[#5E6C84] leading-relaxed">
+            From keynote stagecraft and statutory AGMs to high-conversion inside sales calls that ensure corporate seats are full, we manage the entire lifecycle with zero junior dilution.
+          </p>
         </div>
 
-        {/* Numbered Clean Service Rows / Accordion */}
-        <div className="border-t border-white/10 divide-y divide-white/10">
+        {/* Interactive Service Accordion / Showcase Grid */}
+        <div className="border-t border-[#D0C3BA]/70 divide-y divide-[#D0C3BA]/70">
           {servicesList.map((service, idx) => {
-            const isExpanded = expandedIndex === idx;
+            const isOpen = activeService === idx;
             return (
               <div
                 key={idx}
-                className="py-6 sm:py-8 transition-colors group cursor-pointer"
-                onClick={() => setExpandedIndex(isExpanded ? -1 : idx)}
+                className="py-6 sm:py-8 transition-colors group"
               >
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-start sm:items-center gap-4 sm:gap-6">
-                    <span className="font-mono text-xs sm:text-sm text-slate-400 font-bold shrink-0 mt-1 sm:mt-0">
-                      [ {service.number} ]
+                {/* Header Row */}
+                <div
+                  onClick={() => setActiveService(isOpen ? -1 : idx)}
+                  className="flex items-center justify-between gap-4 cursor-pointer select-none"
+                >
+                  <div className="flex items-start sm:items-center gap-4 sm:gap-8">
+                    <span className="font-mono text-sm sm:text-base font-semibold text-[#D7BD88] shrink-0 mt-1 sm:mt-0">
+                      {service.number}
                     </span>
                     <div>
-                      <h3 className="text-lg xs:text-xl sm:text-3xl font-display font-bold text-white group-hover:text-[#E5C07B] transition-colors">
+                      <h3 className="text-xl sm:text-3xl font-display font-medium text-[#10214B] group-hover:text-[#356267] transition-colors">
                         {service.title}
                       </h3>
-                      <div className="text-[11px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 uppercase tracking-wider">
+                      <div className="text-xs sm:text-sm text-[#5E6C84] mt-1 tracking-wide">
                         {service.category}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-                    <span className="text-xs text-slate-400 hidden sm:inline-block">
-                      {isExpanded ? 'Hide details' : 'Explore scope'}
+                  <div className="flex items-center gap-4 shrink-0">
+                    <span className="text-xs font-medium text-[#5E6C84] hidden md:inline-block">
+                      {isOpen ? 'Close details' : 'Explore scope'}
                     </span>
-                    <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-slate-300 group-hover:border-white group-hover:text-white transition-colors">
-                      {isExpanded ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+                    <div className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all ${
+                      isOpen
+                        ? 'bg-[#10214B] text-white border-[#10214B]'
+                        : 'border-[#D0C3BA] text-[#10214B] group-hover:border-[#10214B]'
+                    }`}>
+                      {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </div>
                   </div>
                 </div>
 
-                {/* Expandable Details Area */}
-                {isExpanded && (
-                  <div className="pt-6 mt-4 border-t border-white/5 grid grid-cols-1 md:grid-cols-12 gap-6 animate-in fade-in duration-200">
-                    <div className="md:col-span-6 text-sm text-slate-300 leading-relaxed">
-                      {service.description}
+                {/* Expanded Details Drawer */}
+                {isOpen && (
+                  <div className="pt-8 mt-6 border-t border-[#D0C3BA]/40 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
+                    
+                    {/* Left: Description & Deliverables */}
+                    <div className="lg:col-span-7 space-y-6">
+                      <p className="text-base text-[#323F58] leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      <div className="space-y-3 pt-2">
+                        <div className="text-xs font-bold uppercase tracking-wider text-[#10214B]">
+                          Core Scope &amp; Deliverables
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {service.points.map((pt, pIdx) => (
+                            <div key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#5E6C84]">
+                              <CheckCircle2 className="w-4 h-4 text-[#D7BD88] shrink-0 mt-0.5" />
+                              <span>{pt}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="pt-3">
+                        <a
+                          href="#contact"
+                          className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#10214B] hover:text-[#356267] transition-colors"
+                        >
+                          <span>Request tailored scope for {service.title}</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
 
-                    <div className="md:col-span-6 space-y-2">
-                      <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">
-                        Execution Deliverables:
-                      </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {service.points.map((point, pIdx) => (
-                          <div key={pIdx} className="text-xs text-slate-300 flex items-start gap-2">
-                            <span className="text-[#E5C07B]">•</span>
-                            <span>{point}</span>
-                          </div>
-                        ))}
+                    {/* Right: Authentic High-Res Visual */}
+                    <div className="lg:col-span-5">
+                      <div className="relative rounded-2xl overflow-hidden border border-[#D0C3BA]/60 aspect-[16/10] shadow-sm bg-[#EBE7E1]">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#10214B]/60 via-transparent to-transparent"></div>
+                        <div className="absolute bottom-3 left-4 right-4 text-xs text-white font-medium drop-shadow-sm">
+                          {service.title} • Ahmedabad &amp; Pan-Gujarat Operations
+                        </div>
                       </div>
                     </div>
+
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#EBE7E1] border border-[#D0C3BA]/70 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h4 className="text-lg sm:text-xl font-display font-medium text-[#10214B]">
+              Need a customized multi-city corporate package?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#5E6C84] mt-1">
+              We bundle staging, AV, fabrication, and audience acquisition into one single transparent quote.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            className="shrink-0 px-6 py-3 rounded-full bg-[#10214B] text-white hover:bg-[#356267] text-xs sm:text-sm font-semibold tracking-wide transition-colors"
+          >
+            Get a Direct Founder Proposal
+          </a>
         </div>
 
       </div>

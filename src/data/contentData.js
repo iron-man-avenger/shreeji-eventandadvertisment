@@ -1,52 +1,52 @@
 export const companyData = {
   name: "Shreeji Events & Advertising",
   shortName: "Shreeji Events",
-  tagline: "Corporate Event Management & B2B Telemarketing Agency",
+  tagline: "Corporate Event Management & Experiential Advertising",
+  positioning: "A Fresh, Agile Agency for Modern Corporate Experiences & Guaranteed Delegate Turnout",
   phone: "+91 95124 12444",
   altPhone: "+91 87990 95974",
   email: "inquiry@shreejievents.com",
   headquarters: "Ahmedabad, Gujarat, India",
-  offices: [
+  office: {
+    title: "Ahmedabad Headquarters",
+    address: "317 & 816, Krupal Pathshala, Shivranjani Cross Road, Satellite, Ahmedabad - 380015",
+    landmark: "Shivranjani Cross Road, Satellite",
+    state: "Gujarat, India",
+    phone: "+91 95124 12444",
+    hours: "Monday – Saturday: 9:30 AM – 7:30 PM"
+  },
+  
+  // Real, authentic agency value pillars instead of fake client stats
+  pillars: [
     {
-      city: "Ahmedabad (Head Office)",
-      address: "317 & 816, Krupal Pathshala, Shivranjani Cross Road, Satellite, Ahmedabad - 380015",
-      state: "Gujarat",
-      phone: "+91 95124 12444"
+      title: "100% Founder-Led Execution",
+      desc: "Direct hands-on oversight from briefing to stage teardown. No junior hand-offs or bureaucratic lag.",
+      badge: "Commitment"
     },
     {
-      city: "Pune",
-      address: "111, City Square, Narveer Tanaji Wadi, Shivajinagar, Pune - 411005",
-      state: "Maharashtra",
-      phone: "+91 87990 95974"
+      title: "Hybrid Event & Tele-Acquisition",
+      desc: "We don't just dress up the stage; our dedicated in-house calling squad fills seats with genuine B2B delegates.",
+      badge: "Turnout"
     },
     {
-      city: "Delhi-NCR",
-      address: "Hub & Oak, E-47/3, Pocket D, Okhla Phase II, New Delhi - 110020",
-      state: "Delhi",
-      phone: "+91 95124 12444"
+      title: "Modern 4K Tech & Aesthetics",
+      desc: "Contemporary stagecraft, ambient lighting, curved 4K LED mapping, and architectural exhibition stalls.",
+      badge: "Craft"
     },
     {
-      city: "Mumbai & GIFT City",
-      address: "Corporate Liaison Desks: BKC Mumbai & GIFT City Gandhinagar",
-      state: "Gujarat / Maharashtra",
-      phone: "+91 87990 95974"
+      title: "Agile Turnaround & Transparent Budgets",
+      desc: "As a fresh agency, we offer maximum creative flexibility, fast conceptualization, and zero legacy bloat.",
+      badge: "Agility"
     }
   ],
-  stats: [
-    { number: "450+", label: "Corporate Events Executed" },
-    { number: "250K+", label: "B2B Tele-Calls Placed" },
-    { number: "20+", label: "States Pan-India Network" },
-    { number: "96%", label: "Client Retention Rate" }
-  ],
-  clients: [
-    "Poonawalla Fincorp",
-    "Reliance Retail",
-    "Physics Wallah",
-    "Phoenix Palladium",
-    "GIFT City BFSI Consortium",
-    "Torrent Pharma",
-    "Zydus Lifesciences",
-    "Adani Enterprises"
+
+  // Real sectors the agency actively caters to
+  sectors: [
+    { name: "BFSI & FinTech", desc: "Investor conclaves, partner meets & annual corporate conferences" },
+    { name: "Manufacturing & Engineering", desc: "Industrial expos, dealer summits & plant inaugurations" },
+    { name: "Real Estate & Infrastructure", desc: "Luxury project unveils, channel partner nights & scale model expos" },
+    { name: "Healthcare & Pharmaceuticals", desc: "Medical CME symposiums, product launches & scientific roundtables" },
+    { name: "Tech & Corporate Enterprises", desc: "Annual general meetings (AGMs), leadership offsites & hackathons" }
   ]
 };
 
@@ -54,139 +54,155 @@ export const servicesList = [
   {
     number: "01",
     title: "Corporate Events & Summits",
-    category: "Conferences • Leadership Meets • AGMs",
-    description: "End-to-end production for executive gatherings, annual general meetings, leadership summits, and hybrid conferences with broadcast-grade audio-visuals, stagecraft, and delegate hospitality.",
+    category: "Conferences • Leadership Conclaves • AGMs",
+    description: "End-to-end production for corporate conferences, annual general meetings, leadership retreats, and dealer meets. We handle everything from acoustic design and 4K LED stage mapping to speaker hospitality and seamless guest registration.",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80",
     points: [
-      "Annual General Meetings (AGM) with statutory AV compliance",
-      "CXO Leadership Summits and Industry Roundtables",
-      "Smart QR/RFID check-in, stagecraft & 4K LED mapping",
-      "Executive hospitality, artist coordination & emcee management"
+      "Modern stagecraft, curved LED video walls & spatial lighting",
+      "Statutory AGM audio-visual setup & hybrid live-streaming",
+      "Executive registration, digital QR badges & delegate flow",
+      "Keynote presentation design, emcee curation & protocol management"
     ]
   },
   {
     number: "02",
-    title: "B2B Telemarketing & Inside Sales",
-    category: "Delegate Acquisition • Lead Gen • ABM",
-    description: "Dedicated corporate calling squads that identify decision-makers, deliver personalized event invitations, confirm C-suite RSVPs, and generate qualified B2B sales pipeline for enterprise clients.",
+    title: "B2B Telemarketing & Delegate Turnout",
+    category: "Audience Acquisition • C-Suite RSVPs • Inside Sales",
+    description: "The biggest vulnerability of any corporate event is empty seats. Our dedicated in-house tele-acquisition squad researches qualified decision-makers, places personalized phone invitations, secures confirmed RSVPs, and follows up to ensure high turnout.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80",
     points: [
-      "CXO & Senior Management Delegate Acquisition",
-      "Target Account Penetration & B2B Appointment Setting",
-      "Post-Event Lead Qualification & CRM Pipeline Handoff",
-      "Bilingual calling desks with verified BANT qualification"
+      "Custom C-suite & senior management executive database research",
+      "Consultative phone briefings & RSVP confirmation cadence",
+      "Pre-event attendance re-verification to minimize drop-offs",
+      "Post-event attendee lead profiling & qualified sales pipeline handoff"
     ]
   },
   {
     number: "03",
-    title: "Brand Activations & BTL Marketing",
-    category: "On-Ground Engagement • Roadshows",
-    description: "Dynamic on-ground brand experiences, corporate roadshows, mall and corporate park activations that directly connect your brand with target consumers and business buyers.",
+    title: "Exhibition Stalls & 3D Spatial Fabrication",
+    category: "Trade Expos • Custom Booths • Architectural Fabrication",
+    description: "Turnkey exhibition stall design, 3D architectural rendering, and on-ground fabrication for national trade expos, industrial conventions, and vendor exhibitions. We build booths that attract footfall and command attention.",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
     points: [
-      "Corporate park & tech hub brand activations",
-      "Pan-India multi-city promotional roadshows",
-      "Interactive product sampling & lead capture kiosks",
-      "VIP customer engagement & launch experiences"
+      "Custom 3D booth architectural concepts & spatial layouts",
+      "Turnkey carpentry, metal fabrication, acrylic & graphic printing",
+      "Interactive touchscreen pods, product showcase display plinths",
+      "On-time installation, safety compliance & post-event teardown"
     ]
   },
   {
     number: "04",
-    title: "Exhibition Management & Custom Stalls",
-    category: "3D Fabrication • Booth Architecture",
-    description: "Turnkey exhibition stall design, 3D architectural rendering, modular and customized fabrication for national trade expos, industrial conventions, and international expos.",
+    title: "Brand Activations & BTL Marketing",
+    category: "Experiential Pop-ups • Roadshows • Mall Displays",
+    description: "Experiential on-ground brand activations, corporate park roadshows, mall pop-ups, and interactive sampling kiosks designed to forge tangible, face-to-face connections between your business and high-intent audiences.",
+    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=80",
     points: [
-      "Bespoke 3D stall architectural design and structural fabrication",
-      "Audio-visual integration and interactive touchscreen pods",
-      "On-ground stall management and delegate badge scanning",
-      "Complete logistics, installation, and teardown across India"
+      "Corporate park & IT hub experiential brand kiosks",
+      "Multi-city promotional roadshows across Gujarat & Western India",
+      "Interactive product sampling, gamified touchpoints & instant lead capture",
+      "Permits, venue coordination & trained brand ambassador teams"
     ]
   },
   {
     number: "05",
-    title: "Creative Production & Outdoor Media",
-    category: "Branding • OOH Media • Video Production",
-    description: "High-impact outdoor hoardings, transit media, commercial video shoots, corporate brand films, and large-format printing inventory for high-visibility campaigns.",
+    title: "Creative Advertising & Outdoor Media",
+    category: "OOH Hoardings • Transit Media • Corporate Identity",
+    description: "High-impact outdoor hoardings, transit media, commercial corporate films, and print collaterals. We develop coherent visual identities that ensure your event or brand launch reverberates across urban touchpoints.",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80",
     points: [
-      "Strategic airport, highway & urban OOH hoardings",
-      "Corporate video films, keynote showreels & event recaps",
-      "Branch branding, environmental graphics & offset print media",
-      "Transit media planning and national media buying"
+      "Strategic highway, airport corridor & prime city OOH hoardings",
+      "Corporate event recap films, teaser motion graphics & keynote videos",
+      "Brochures, delegate welcome kits, certificates & environmental signage",
+      "Media planning, billboard printing & structural installation"
     ]
   }
 ];
 
-export const portfolioProjects = [
+export const capabilitiesShowcase = [
   {
-    title: "National BFSI Leadership Conclave",
-    client: "Poonawalla Fincorp & Banking Partners",
-    category: "Corporate Summit & Delegate Acquisition",
-    year: "2025",
-    location: "Mumbai & Ahmedabad",
-    description: "A 2-day national executive summit with 1,200+ C-level banking delegates secured via dedicated tele-outreach, coupled with stadium-grade stage AV.",
-    metrics: "1,200+ CXOs • 98% Turnout"
+    title: "Keynote & Summit Scenography",
+    category: "Event Architecture",
+    description: "Modern curved LED backdrops, diffused theatrical lighting, and crisp surround sound engineered for executive business presentations.",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
+    tags: ["4K LED Stage", "Audio Engineering", "Keynote Visuals"]
   },
   {
-    title: "Pan-India Retail & Commercial Activation",
-    client: "Reliance Smart",
-    category: "BTL Activation & Ad Campaign",
-    year: "2025",
-    location: "24 Cities Across India",
-    description: "Executed comprehensive on-ground shopper activations, commercial production, and multi-city store launches with real-time lead capture.",
-    metrics: "24 Zonal Hubs • 100K+ Footfall"
+    title: "Bespoke Trade Expo Architecture",
+    category: "Spatial Fabrication",
+    description: "Clean, architectural exhibition booths fabricated with premium finishes, integrated display lighting, and conversational lounges.",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
+    tags: ["3D Booth Design", "Custom Fabrication", "Expo Management"]
   },
   {
-    title: "Annual Shareholder Convention & AGM",
-    client: "Gujarat Industrial & Tech Conglomerate",
-    category: "Annual General Meeting (AGM)",
-    year: "2025",
-    location: "Ahmedabad, Gujarat",
-    description: "Hybrid statutory AGM with high-definition live multi-stream, biometric shareholder verification, and flawless auditorium audio-visual engineering.",
-    metrics: "4,500 In-Person • Zero Downtime"
+    title: "Auditorium & Conclave Production",
+    category: "Conference Execution",
+    description: "Flawless technical coordination for large gatherings, statutory AGMs, and multi-session annual corporate conferences.",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80",
+    tags: ["Auditorium Sound", "Hybrid Streaming", "Delegate Registration"]
   },
   {
-    title: "High-Impact OOH & Luxury Brand Showcase",
-    client: "Phoenix Palladium",
-    category: "Hoardings & Outdoor Media",
-    year: "2024",
-    location: "Ahmedabad & Pune",
-    description: "Strategic prime-location hoardings, mall facade illumination, and VIP influencer evening orchestration for flagship store introductions.",
-    metrics: "Tier-1 Corridors • 15M+ Impressions"
+    title: "Dedicated B2B Tele-Outreach Desk",
+    category: "Audience Acquisition",
+    description: "Our articulate inside-sales calling squad in Ahmedabad engages prospective corporate delegates with personalized briefings to lock RSVPs.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80",
+    tags: ["CXO RSVP Calls", "Attendance Verification", "Lead Qualification"]
   },
   {
-    title: "Enterprise EdTech National Promotion",
-    client: "Physics Wallah",
-    category: "Product Promotion & Student Conclave",
-    year: "2024",
-    location: "Ahmedabad, Vadodara, Surat",
-    description: "Full-scale arena production for student leadership conclaves with stagecraft, sound reinforcement, and mass registration management.",
-    metrics: "8,000+ Attendees • Multi-Center"
+    title: "Experiential Brand Activations",
+    category: "BTL Engagement",
+    description: "Dynamic on-ground touchpoints in high-footfall business districts, mall atriums, and commercial hubs that spark direct interaction.",
+    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=80",
+    tags: ["Experiential Kiosks", "Roadshows", "Direct Engagement"]
   },
   {
-    title: "GIFT City Financial Conclave",
-    client: "International Financial Services Authority Partners",
-    category: "Global Financial Conference",
-    year: "2024",
-    location: "GIFT City, Gandhinagar",
-    description: "Bilingual tele-calling campaign to global institutional investors, paired with luxury delegate reception and multi-track conference halls.",
-    metrics: "600+ Global Delegates"
+    title: "Strategic OOH & Outdoor Visibility",
+    category: "Advertising & Media",
+    description: "Prime billboard placements and urban visual branding ensuring widespread regional awareness for your corporate summit or launch.",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80",
+    tags: ["Hoardings & OOH", "Transit Media", "Print Production"]
   }
 ];
 
 export const processSteps = [
   {
     number: "01",
-    title: "Discover & Strategize",
-    description: "Understanding your brand objectives, analyzing audience insights, and architecting the exact campaign or event concept.",
-    tags: ["Brand Research", "Audience Insights", "Strategic Planning"]
+    title: "Discovery & Strategic Brief",
+    description: "We understand your exact event objectives, audience profile, budget parameters, and venue specifications to craft a tailored blueprint.",
+    deliverables: ["Creative Moodboard", "Space & Audio-Visual Plan", "Target Audience Matrix"]
   },
   {
     number: "02",
-    title: "Create & Execute",
-    description: "Turning plans into reality through precision stagecraft, dedicated telemarketing outreach, and on-ground coordination.",
-    tags: ["Stage Production", "Tele-Acquisition", "On-Ground Management"]
+    title: "Production & Tele-Mobilization",
+    description: "Our fabrication workshop builds custom stage elements while our tele-calling desk simultaneously begins outreach to secure confirmed delegates.",
+    deliverables: ["3D Stage Renderings", "Inside-Sales Calling Cadence", "Vendor & Tech Rehearsals"]
   },
   {
     number: "03",
-    title: "Deliver & Grow",
-    description: "Ensuring zero-friction execution with post-event sales lead qualification and long-term brand equity development.",
-    tags: ["Quality Assurance", "Lead Handover", "Ongoing Partnership"]
+    title: "Flawless Execution & Handoff",
+    description: "On event day, our leadership team manages on-ground operations from cue-to-cue, followed by post-event lead data delivery to your sales team.",
+    deliverables: ["Real-Time Show Calling", "VIP Hospitality Protocol", "Qualified Lead Handoff"]
+  }
+];
+
+export const telemarketingProcess = [
+  {
+    step: "01",
+    title: "Decision-Maker Profiling",
+    desc: "We curate a targeted database of relevant Directors, CXOs, and VP-level executives tailored to your event topic and industry sector."
+  },
+  {
+    step: "02",
+    title: "Personalized Telephone Invitations",
+    desc: "Our articulate, trained inside-sales callers deliver executive briefings, highlight keynote value, and secure verbal and email RSVPs."
+  },
+  {
+    step: "03",
+    title: "Pre-Event Attendance Verification",
+    desc: "Attendance confirmation calls, digital pass dispatch, and venue logistics support ensure confirmed delegates show up on event morning."
+  },
+  {
+    step: "04",
+    title: "Post-Event Lead Qualification",
+    desc: "48-hour follow-up calls to attendees to gauge interest, collect feedback, and pass warm commercial inquiries directly to your reps."
   }
 ];

@@ -1,69 +1,152 @@
 import React from 'react';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Phone, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import { companyData } from '../data/contentData';
 
 export default function Hero() {
   return (
-    <section className="relative pt-12 sm:pt-20 pb-12 sm:pb-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 w-full">
+    <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden bg-[#EBE7E1]">
+      
+      {/* Subtle Architectural Ambient Watermark */}
+      <div 
+        className="absolute right-0 top-12 sm:top-8 w-[280px] sm:w-[460px] lg:w-[620px] pointer-events-none select-none -z-0 opacity-[0.045] filter grayscale"
+        aria-hidden="true"
+      >
+        <img
+          src="/Shreeji%20dark%20mode%20logo.svg"
+          alt="Shreeji Brand Watermark"
+          className="w-full h-auto object-contain translate-x-12 sm:translate-x-20"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
-        {/* Hero Top Content Area with Right Watermark */}
-        <div className="relative">
-          
-          {/* Subtle Shree Logo Watermark shifted further right in Light Shade */}
-          <div 
-            className="absolute -right-16 sm:-right-8 md:-right-4 lg:-right-2 xl:right-4 -top-8 sm:-top-12 lg:-top-14 w-[240px] xs:w-[300px] sm:w-[420px] md:w-[520px] lg:w-[620px] xl:w-[700px] pointer-events-none select-none z-0 flex items-center justify-end overflow-visible"
-            aria-hidden="true"
-          >
-            <img
-              src="/Shreeji%20dark%20mode%20logo.svg"
-              alt="Shree Logo Watermark"
-              className="w-full h-auto object-contain opacity-15 sm:opacity-20 transition-opacity duration-700 filter drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] translate-x-6 sm:translate-x-12 lg:translate-x-20"
-            />
+        {/* Top Tag & Status */}
+        <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div className="pill-badge pill-badge-gold">
+            <span className="w-2 h-2 rounded-full bg-[#B39352] animate-pulse"></span>
+            <span>A Fresh Agency for Corporate Gujarat &amp; Western India</span>
           </div>
 
-          {/* Main Headline & Details */}
-          <div className="relative z-10 max-w-5xl space-y-5 sm:space-y-6">
-            <h1 className="text-2xl xs:text-[30px] sm:text-5xl md:text-6xl lg:text-[64px] font-display font-extrabold uppercase tracking-tight text-white leading-[1.12] sm:leading-[1.08]">
-              Proven Expertise in Corporate Events &amp; B2B{' '}
-              <span className="inline-block whitespace-nowrap">Telemarketing.</span>
-            </h1>
-
-            <div className="max-w-2xl text-slate-300 text-sm sm:text-base lg:text-lg font-normal leading-relaxed pt-1">
-              From concept to execution, we craft impactful events and high-velocity B2B tele-marketing campaigns that inspire trust, elevate engagement, and leave a lasting impression across India.
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
-              <a
-                href={`tel:${companyData.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-black hover:bg-[#E5C07B] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-lg text-center"
-              >
-                <Phone className="w-3.5 h-3.5 text-black shrink-0" />
-                <span>Book a consultation</span>
-              </a>
-
-              <a
-                href="#portfolio"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full border border-white/20 hover:border-white text-white transition-all font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer text-center"
-              >
-                <span>See our work</span>
-                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
-              </a>
-            </div>
+          <div className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#5E6C84] font-medium">
+            <MapPin className="w-3.5 h-3.5 text-[#10214B]" />
+            <span>Satellite, Ahmedabad</span>
           </div>
         </div>
 
-        {/* Feature Numbers */}
-        <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-          {companyData.stats.map((stat, idx) => (
-            <div key={idx} className="space-y-1">
-              <div className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
-                {stat.number}
+        {/* Main Editorial Headline */}
+        <div className="max-w-5xl space-y-6">
+          <h1 className="text-3xl xs:text-4xl sm:text-6xl lg:text-[68px] font-display font-extrabold uppercase tracking-tight text-[#10214B] leading-[1.08] sm:leading-[1.04]">
+            Crafting Memorable Corporate Events &amp; High-Impact{' '}
+            <span className="underline decoration-[#D7BD88] decoration-4 underline-offset-8">Advertising.</span>
+          </h1>
+
+          <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#323F58] font-normal leading-relaxed">
+            An emerging corporate event management and experiential advertising agency in Ahmedabad. We bridge the gap between contemporary 4K stagecraft, bespoke exhibition architecture, and a dedicated in-house B2B tele-acquisition squad that fills your hall with verified decision-makers.
+          </p>
+
+          {/* Action CTAs */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 w-full sm:w-auto">
+            <a
+              href={`tel:${companyData.phone.replace(/[^0-9+]/g, '')}`}
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#10214B] text-[#EBE7E1] hover:bg-[#1C326E] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 cursor-pointer shadow-md hover:shadow-lg text-center"
+            >
+              <Phone className="w-4 h-4 text-[#D7BD88] shrink-0" />
+              <span>Book a Consultation</span>
+            </a>
+
+            <a
+              href="#capabilities"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#10214B] border border-[#D0C3BA] hover:border-[#10214B] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow text-center"
+            >
+              <span>Explore Capabilities</span>
+              <ArrowRight className="w-4 h-4 text-[#10214B] shrink-0" />
+            </a>
+          </div>
+        </div>
+
+        {/* Editorial Visual Showcase Trio (Real Atmosphere Photos) */}
+        <div className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-center">
+          
+          {/* Visual 1: Corporate Stagecraft */}
+          <div className="md:col-span-6 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+            <div className="aspect-[16/10] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+                alt="Corporate Summit & Stagecraft"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-5 bg-white flex items-center justify-between border-t border-[#D0C3BA]/40">
+              <div>
+                <div className="text-xs uppercase tracking-widest text-[#B39352] font-bold">
+                  Stage &amp; Production
+                </div>
+                <div className="text-sm font-display font-bold text-[#10214B] mt-0.5">
+                  Conclaves, AGMs &amp; 4K LED Mapping
+                </div>
               </div>
-              <div className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 font-medium">
-                {stat.label}
+              <span className="text-[11px] font-semibold text-[#5E6C84] bg-[#EBE7E1] px-2.5 py-1 rounded-full">
+                Turnkey AV
+              </span>
+            </div>
+          </div>
+
+          {/* Visual 2: Exhibition Architecture */}
+          <div className="md:col-span-3 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                alt="Exhibition Stalls & Spatial Fabrication"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-4 bg-white border-t border-[#D0C3BA]/40">
+              <div className="text-[10px] uppercase tracking-wider text-[#B39352] font-bold">
+                Exhibition Stalls
               </div>
+              <div className="text-xs font-display font-bold text-[#10214B] mt-0.5">
+                Custom 3D Booth Design
+              </div>
+            </div>
+          </div>
+
+          {/* Visual 3: B2B Tele-Outreach Desk */}
+          <div className="md:col-span-3 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                alt="Inside Sales Calling Desk"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-4 bg-white border-t border-[#D0C3BA]/40">
+              <div className="text-[10px] uppercase tracking-wider text-[#B39352] font-bold">
+                B2B Tele-Outreach
+              </div>
+              <div className="text-xs font-display font-bold text-[#10214B] mt-0.5">
+                Dedicated Delegate Calling
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Real Differentiators Strip */}
+        <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-[#D0C3BA]/60 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {companyData.pillars.map((pillar, idx) => (
+            <div key={idx} className="p-5 rounded-2xl bg-white/70 border border-[#D0C3BA]/60 space-y-2 hover:bg-white transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] uppercase tracking-widest font-bold text-[#B39352]">
+                  [ {pillar.badge} ]
+                </span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#10214B]" />
+              </div>
+              <h4 className="text-sm font-display font-bold text-[#10214B]">
+                {pillar.title}
+              </h4>
+              <p className="text-xs text-[#5E6C84] leading-relaxed">
+                {pillar.desc}
+              </p>
             </div>
           ))}
         </div>

@@ -41,7 +41,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col selection:bg-[#E5C07B]/30 selection:text-white">
+    <div className="min-h-screen bg-[#EBE7E1] text-[#10214B] flex flex-col selection:bg-[#10214B] selection:text-[#EBE7E1]">
       <Navbar />
       <main className="flex-grow">
         <Hero />
