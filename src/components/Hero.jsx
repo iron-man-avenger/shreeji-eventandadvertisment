@@ -20,22 +20,9 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
-        {/* Top Tag & Status */}
-        <div className="flex flex-wrap items-center gap-3 mb-4 sm:mb-5">
-          <div className="pill-badge pill-badge-gold">
-            <span className="w-2 h-2 rounded-full bg-[#B39352] animate-pulse"></span>
-            <span>Turnkey Corporate Experiences • Gujarat &amp; Western India</span>
-          </div>
-
-          <div className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#5E6C84] font-medium">
-            <MapPin className="w-3.5 h-3.5 text-[#10214B]" />
-            <span>Satellite, Ahmedabad</span>
-          </div>
-        </div>
-
-        {/* Main Editorial Headline */}
+        {/* Main Editorial Headline - Shifted to Above */}
         <div className="max-w-5xl space-y-6">
-          <h1 className="text-3xl xs:text-4xl sm:text-6xl lg:text-[68px] font-display font-extrabold uppercase tracking-tight text-[#10214B] leading-[1.08] sm:leading-[1.04]">
+          <h1 className="text-3xl xs:text-4xl sm:text-6xl lg:text-[70px] font-display font-extrabold uppercase tracking-tight text-[#10214B] leading-[1.06] sm:leading-[1.02]">
             Crafting Memorable Corporate Events &amp; High-Impact{' '}
             <span className="underline decoration-[#D7BD88] decoration-4 underline-offset-8">Advertising.</span>
           </h1>
@@ -45,7 +32,7 @@ export default function Hero() {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
             <a
               href={`tel:${companyData.phone.replace(/[^0-9+]/g, '')}`}
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#10214B] text-[#EBE7E1] hover:bg-[#1C326E] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 cursor-pointer shadow-md hover:shadow-lg text-center"
@@ -61,6 +48,19 @@ export default function Hero() {
               <span>Explore Capabilities</span>
               <ArrowRight className="w-4 h-4 text-[#10214B] shrink-0" />
             </a>
+          </div>
+
+          {/* Tag & Status - Shifted to Below Content */}
+          <div className="flex flex-wrap items-center gap-3 pt-3">
+            <div className="pill-badge pill-badge-gold">
+              <span className="w-2 h-2 rounded-full bg-[#B39352] animate-pulse"></span>
+              <span>Turnkey Corporate Experiences • Gujarat &amp; Western India</span>
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 text-xs text-[#5E6C84] font-medium">
+              <MapPin className="w-3.5 h-3.5 text-[#10214B]" />
+              <span>Satellite, Ahmedabad</span>
+            </div>
           </div>
         </div>
 
