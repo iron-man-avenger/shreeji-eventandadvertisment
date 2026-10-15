@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[#D0C3BA] leading-relaxed max-w-sm text-xs sm:text-sm">
-              A fresh, agile agency delivering turnkey corporate conferences, stagecraft, exhibition stalls, and in-house B2B audience acquisition.
+              A premier corporate agency delivering turnkey conferences, stagecraft, exhibition stalls, and in-house B2B audience acquisition.
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-[#D0C3BA]">

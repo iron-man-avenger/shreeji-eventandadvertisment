@@ -14,7 +14,7 @@ export default function AboutSection() {
             About Shreeji Events &amp; Advertising
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#10214B] tracking-tight leading-[1.15]">
-            A fresh agency built for high-craft corporate experiences &amp; confirmed audience turnout.
+            Built for high-craft corporate experiences &amp; confirmed audience turnout.
           </h2>
         </div>
 
@@ -30,7 +30,7 @@ export default function AboutSection() {
               We operate as a nimble, specialized partner uniting two critical sides of corporate event success under one roof: turnkey architectural stagecraft &amp; AV production, coupled with a dedicated in-house B2B tele-acquisition desk that personally calls and secures qualified C-level delegates.
             </p>
             <p className="text-sm sm:text-base text-[#5E6C84]">
-              Because we are fresh in the market, every single project is founder-led. You get direct senior accountability, transparent commercial budgets, fast turnaround, and obsessive attention to detail from the first creative moodboard to the final stage teardown.
+              Every single project is founder-led. You get direct senior accountability, transparent commercial budgets, fast turnaround, and obsessive attention to detail from the first creative moodboard to the final stage teardown.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
@@ -55,7 +55,7 @@ export default function AboutSection() {
           {/* Right Column: Founder Pledge & Authentic Metrics */}
           <div className="lg:col-span-5 bg-white p-7 sm:p-8 rounded-3xl border border-[#D0C3BA]/70 shadow-sm relative overflow-hidden">
             <div className="text-xs font-bold uppercase tracking-widest text-[#D7BD88] mb-2">
-              Our Fresh Agency Commitment
+              Our Agency Commitment
             </div>
             <h3 className="text-xl sm:text-2xl font-display font-medium text-[#10214B] mb-4">
               Why Corporate Teams Choose An Agile Partner

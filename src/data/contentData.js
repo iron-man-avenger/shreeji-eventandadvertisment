@@ -2,7 +2,7 @@ export const companyData = {
   name: "Shreeji Events & Advertising",
   shortName: "Shreeji Events",
   tagline: "Corporate Event Management & Experiential Advertising",
-  positioning: "A Fresh, Agile Agency for Modern Corporate Experiences & Guaranteed Delegate Turnout",
+  positioning: "A Dedicated, Agile Agency for Modern Corporate Experiences & Guaranteed Delegate Turnout",
   phone: "+91 95124 12444",
   altPhone: "+91 87990 95974",
   email: "inquiry@shreejievents.com",
@@ -35,7 +35,7 @@ export const companyData = {
     },
     {
       title: "Agile Turnaround & Transparent Budgets",
-      desc: "As a fresh agency, we offer maximum creative flexibility, fast conceptualization, and zero legacy bloat.",
+      desc: "We offer maximum creative flexibility, fast conceptualization, transparent execution, and zero legacy bloat.",
       badge: "Agility"
     }
   ],

@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <div className="pill-badge pill-badge-gold">
             <span className="w-2 h-2 rounded-full bg-[#B39352] animate-pulse"></span>
-            <span>A Fresh Agency for Corporate Gujarat &amp; Western India</span>
+            <span>Turnkey Corporate Experiences • Gujarat &amp; Western India</span>
           </div>
 
           <div className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#5E6C84] font-medium">
