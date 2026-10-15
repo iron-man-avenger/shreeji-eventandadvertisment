@@ -4,11 +4,11 @@ import { companyData } from '../data/contentData';
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden bg-[#EBE7E1]">
+    <section className="relative pt-20 sm:pt-24 lg:pt-24 pb-14 sm:pb-20 overflow-hidden bg-[#EBE7E1]">
       
       {/* Prominent Architectural Ambient Watermark - Clearly Visible */}
       <div 
-        className="absolute right-0 top-10 sm:top-6 w-[320px] sm:w-[500px] lg:w-[680px] pointer-events-none select-none z-0 opacity-20 sm:opacity-25 transition-opacity"
+        className="absolute right-0 top-6 sm:top-2 w-[320px] sm:w-[500px] lg:w-[680px] pointer-events-none select-none z-0 opacity-20 sm:opacity-25 transition-opacity"
         aria-hidden="true"
       >
         <img
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
         {/* Top Tag & Status */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="flex flex-wrap items-center gap-3 mb-4 sm:mb-5">
           <div className="pill-badge pill-badge-gold">
             <span className="w-2 h-2 rounded-full bg-[#B39352] animate-pulse"></span>
             <span>Turnkey Corporate Experiences • Gujarat &amp; Western India</span>
