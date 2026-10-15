@@ -6,15 +6,15 @@ export default function Hero() {
   return (
     <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden bg-[#EBE7E1]">
       
-      {/* Subtle Architectural Ambient Watermark */}
+      {/* Prominent Architectural Ambient Watermark - Clearly Visible */}
       <div 
-        className="absolute right-0 top-12 sm:top-8 w-[280px] sm:w-[460px] lg:w-[620px] pointer-events-none select-none -z-0 opacity-[0.045] filter grayscale"
+        className="absolute right-0 top-10 sm:top-6 w-[320px] sm:w-[500px] lg:w-[680px] pointer-events-none select-none z-0 opacity-20 sm:opacity-25 transition-opacity"
         aria-hidden="true"
       >
         <img
           src="/Shreeji%20dark%20mode%20logo.svg"
           alt="Shreeji Brand Watermark"
-          className="w-full h-auto object-contain translate-x-12 sm:translate-x-20"
+          className="w-full h-auto object-contain translate-x-8 sm:translate-x-16 drop-shadow-sm"
         />
       </div>
 
@@ -64,15 +64,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Editorial Visual Showcase Trio (Real Atmosphere Photos) */}
+        {/* Editorial Visual Showcase Trio (Authentic Indian Corporate & Event Photos) */}
         <div className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-center">
           
-          {/* Visual 1: Corporate Stagecraft */}
+          {/* Visual 1: Corporate Stagecraft (Real Indian Conclave & Stage) */}
           <div className="md:col-span-6 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
             <div className="aspect-[16/10] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
-                alt="Corporate Summit & Stagecraft"
+                src="/images/panel-discussion-hyderabad.jpg"
+                alt="Corporate Summit & Panel Conclave in India"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
@@ -91,12 +91,12 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Visual 2: Exhibition Architecture */}
+          {/* Visual 2: Exhibition Architecture (Real Indian Trade Expo Stall) */}
           <div className="md:col-span-3 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
-                alt="Exhibition Stalls & Spatial Fabrication"
+                src="/images/indian-expo-stall.jpg"
+                alt="Exhibition Stalls & Spatial Fabrication in India"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
@@ -110,12 +110,12 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Visual 3: B2B Tele-Outreach Desk */}
+          {/* Visual 3: B2B Tele-Outreach Desk (Real Indian Corporate Team) */}
           <div className="md:col-span-3 group relative rounded-2xl overflow-hidden border border-[#D0C3BA]/70 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
-                alt="Inside Sales Calling Desk"
+                src="/images/indian-corporate-team.jpg"
+                alt="Corporate Inside Sales Calling Desk in India"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
